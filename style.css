@@ -158,9 +158,9 @@ button:hover {
 
 .gray-block {
   background-color: var(--gray-lt);
-  width: 255px;
+  /* width: 255px; */
   height: 240px;
-  border-radius: 20px;
+  border-radius: 20px 0 0 20px;
   display: none;
 }
 
@@ -190,7 +190,7 @@ button:hover {
 }
 
 /* DESKTOP 1200px */
-@media (width > 75em) {
+@media (width >= 75em) {
   body {
     padding-block: 55px;
   }
@@ -203,5 +203,28 @@ button:hover {
   }
   .gray-block {
     display: block;
+  }
+
+  .grid-main {
+    display: grid;
+    grid-template-columns:
+      1fr
+      repeat(12, calc((69.375rem - 30px * 11) / 12))
+      1fr;
+    gap: 30px;
+  }
+
+  .hero-text {
+    grid-column: 2 / 8;
+  }
+
+  .hero-image {
+    grid-column: 8 / -2;
+  }
+  /* HERO */
+
+  .gray-block {
+    display: block;
+    grid-column: -2 / -1;
   }
 }
