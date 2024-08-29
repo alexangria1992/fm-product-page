@@ -142,9 +142,16 @@ button:hover {
 }
 
 .topnav {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.topnav a {
+  grid-column: 2;
+}
+
+.topnav button {
+  grid-column: 3 / -2;
+  justify-self: end;
 }
 
 .hero-text {
