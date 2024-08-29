@@ -141,10 +141,6 @@ button:hover {
   gap: 20px;
 }
 
-.grid-content {
-  grid-column: 2 / 3;
-}
-
 .topnav {
   display: flex;
   justify-content: space-between;
@@ -177,7 +173,19 @@ button:hover {
   }
   .grid-main {
     display: grid;
-    grid-template-columns: 1fr min(100% - 80px, 50rem) 1fr;
+    grid-template-columns:
+      10px
+      repeat(6, calc((100% - 80px - 30px * 5) / 6))
+      10px;
+    gap: 30px;
+  }
+
+  .hero-text {
+    grid-column: 2 / 5;
+  }
+
+  .hero-image {
+    grid-column: 5 / -1;
   }
 }
 
