@@ -39,13 +39,22 @@
           <button class="button orange">Pre-order now</button>
           <p class="info"><strong class="caps">Release on 5/27</strong></p>
         </div>
-        <img
-          height="1080"
-          width="960"
-          src="assets/desktop/image-keyboard.jpg"
-          alt=""
-          class="hero-image"
-        />
+        <picture class="hero-image">
+          <source
+            media="(min-width: >= 75em)"
+            srcset="assets/desktop/image-keyboard.jpg"
+          />
+          <source
+            media="(min-width: >= 43.75em)"
+            srcset="assets/tablet/image-keyboard.jpg"
+          />
+          <img
+            height="1080"
+            width="960"
+            src="assets/mobile/image-keyboard.jpg"
+            alt=""
+          />
+        </picture>
         <!-- </div> -->
         <div class="gray-block"></div>
       </section>

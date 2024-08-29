@@ -121,6 +121,7 @@ img {
   height: auto;
   object-fit: cover;
   display: block;
+  object-fit: cover;
 }
 
 button {
@@ -172,9 +173,6 @@ button:hover {
     repeat(3, calc((100% - 48px - 20px * 2) / 3))
     4px;
   column-gap: 20px;
-}
-
-.topnav {
   align-items: center;
 }
 
@@ -210,8 +208,16 @@ button:hover {
 .hero-text .info {
   grid-column: span 1;
 }
+
 .hero-image {
   grid-column: 2 / -1;
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  height: 20.6875rem;
+  object-position: left center;
 }
 /* HERO */
 
@@ -225,8 +231,13 @@ button:hover {
 
 /* MEDIA QUERIES */
 
-/* TABLET 800px*/
-@media (width > 50em) {
+/* 700px */
+@media (width >= 43.75em) {
+  :root {
+    --space-sm: 40px;
+    --space-med: 72px;
+    --space-lg: 140px;
+  }
   body {
     padding-block: 40px;
   }
@@ -243,11 +254,15 @@ button:hover {
   }
 
   .hero-text {
-    grid-column: 2 / 5;
+    grid-column: 2 /6;
   }
 
   .hero-image {
-    grid-column: 5 / -1;
+    grid-column: 6 / -1;
+  }
+
+  .hero-image img {
+    height: 26.5625rem;
   }
 }
 
@@ -278,15 +293,22 @@ button:hover {
 
   .hero-text {
     grid-column: 2 / 8;
+    column-gap: 32px;
   }
 
   .hero-image {
     grid-column: 8 / -2;
+    border-radius: 20px;
   }
   /* HERO */
 
   .gray-block {
     display: block;
     grid-column: -2 / -1;
+    align-self: start;
+  }
+
+  .hero-image img {
+    height: 30rem;
   }
 }
